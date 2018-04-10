@@ -1,0 +1,38 @@
+<div class="row">
+   <div class="col-md-12">
+        <h1>User List</h1>
+   </div>
+</div>
+<div class="row">
+   <div class="col-md-12"> 
+   <%if(userList){%>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">email</th>
+              <th scope="col">username</th>
+              <th scope="col">password</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody> 
+          <% for(i=0; i<userList.length; i++) { %>
+                <tr>
+                      <td><%=userList[i].firstName+' '+userList[i].lastName  %></td>
+                      <td><%=userList[i].email%></td>
+                      <td><%=userList[i].username%></td>
+                      <td><%=userList[i].password%></td>   
+                      <td>
+                        <a href="/users/edit/<%=userList[i]._id%>">edit</a>
+                      
+                      </td>
+                </tr>
+          <% } %>
+            
+          </tbody>
+        </table>
+      <%}%>
+        
+  </div>
+</div>

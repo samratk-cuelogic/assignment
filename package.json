@@ -1,0 +1,27 @@
+{
+  "name": "expuserapp",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "dotenv": "^5.0.1",
+    "ejs": "~2.5.7",
+    "express": "~4.16.0",
+    "express-session": "^1.15.6",
+    "express-useragent": "^1.0.12",
+    "express-validation": "^1.0.2",
+    "express-validator": "^5.1.2",
+    "http-errors": "~1.6.2",
+    "moment": "^2.22.0",
+    "mongoose": "^5.0.13",
+    "morgan": "~1.9.0",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0"
+  }
+}

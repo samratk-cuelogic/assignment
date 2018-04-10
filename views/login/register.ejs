@@ -1,0 +1,105 @@
+<div class="row">
+ 
+ 
+</div>
+<div class="row">
+            <div class="col-md-5">
+                <div class="form-box">
+                    <h2>   App </h2>
+                    <p>
+                        <ul class="list-group">
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                STEPS :
+                                 
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                1. Register
+                                 
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                2. Login
+                            </li>
+                            
+                        </ul>
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-5"> 
+                <div class="form-box" id="fbregister">
+                    <div class="form-top">
+                        <div class="form-top-left">
+                            <h3>Sign up </h3>
+                        </div>
+                        <div class="form-top-right">
+                            <i class="fa fa-pencil"></i>
+                        </div>
+                       
+                       <!--  <% if(errors) {%>
+                            <ul>
+                              
+                                <% for (var i = 0; i < errors.length; i++) { %>
+                                <li> 
+                                        <%=errors[i].param %>  
+                                        <%=errors[i].msg %> 
+                                </li>
+                                <% } %>
+                            </ul>
+                        <% } %> -->
+
+                    </div>
+                    <div class="form-bottom">
+                        <form role="form" id="registration-form" name="registration-form" action="/register" method="post" class="registration-form">
+                         <div class="form-group">
+                                <label class="sr-only" for="first_name">First name</label>
+                                <input type="text" name="first_name" placeholder="First name..." class="form-first-name form-control" id="first_name" title="First name">
+                                 <% if(errors.first_name) {%>
+                                <div class="alert alert-danger"><%=errors.first_name.msg%></div>
+                                <%}%>
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="last_name">Last name</label>
+                                <input type="text" name="last_name" placeholder="Last name..." class="form-control" id="last_name" title="Last name">
+                                 <% if(errors.last_name) {%>
+                                <div class="alert alert-danger"><%=errors.last_name.msg%></div>
+                                <%}%>
+                            </div>
+                            <div class="form-group ">
+                                <label class="sr-only" for="user_email">Email</label>
+                                <input type="text" name="user_email" placeholder="Email..." class="form-control" id="user_email" title="Email will be used as username.">
+                                 <% if(errors.user_email) {%>
+                                <div class="alert alert-danger"><%=errors.user_email.msg%></div>
+                                <%}%>
+                            </div>
+                             <div class="form-group ">
+                                <label class="sr-only" for="username">Username</label>
+                                <input type="text" name="username" placeholder="Username..." class="form-control" id="username" title="Email will be used as username.">
+                                 <% if(errors.username) {%>
+                                <div class="alert alert-danger"><%=errors.username.msg%></div>
+                                <%}%>
+                            </div>
+                            <div class="form-group ">
+                                <label class="sr-only" for="user_password">Password</label>
+                                <input type="password" name="user_password" id="user_password" placeholder="password..." class="form-control" title="Password.">
+                                 <% if(errors.user_password) {%>
+                                <div class="alert alert-danger"><%=errors.user_password.msg%></div>
+                                <%}%>
+                            </div>  
+                             <div class="form-group ">
+                                <label class="sr-only" for="confirm_password">Confirm Password</label>
+                                <input type="password" name="confirm_password" id="confirm_password" placeholder="confirm password..." class="form-control" title="Confirm Password.">
+                                 <% if(errors.confirm_password) {%>
+                                <div class="alert alert-danger"><%=errors.confirm_password.msg%></div>
+                                <%}%>
+                            </div> 
+                             
+                            <button type="submit" class="btn btn-primary btn-sm">Sign me up!</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <!-- <footer>
