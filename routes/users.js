@@ -19,11 +19,13 @@ function ensureAuthenticated(req, res, next){
 }
 router.get('/dashboard',ensureAuthenticated, userCntrl.index);
 router.get('/list',ensureAuthenticated, userCntrl.list);
+router.get('/listjson',ensureAuthenticated, userCntrl.listjson);
 router.get('/getuser',ensureAuthenticated, userCntrl.getuser);
 router.get('/getusernotloggedin',ensureAuthenticated, userCntrl.getusernotloggedin);
 router.get('/edit/:id',ensureAuthenticated, userCntrl.edit);
 router.post('/update/:id',ensureAuthenticated, userCntrl.update);
 router.post('/getuser',ensureAuthenticated, userCntrl.getuser);
+ 
 
 	module.exports = router;
 // 	module.exports.test = function(){

@@ -1,12 +1,22 @@
 <div class="row">
- 
-          
+
 </div>
 <div class="row">
 
             <div class="col-md-5">
                 <div class="form-box">
                     <h2>   App </h2>
+                    
+                    
+                        <%if(error){%>
+                        <%=error%>
+                        <% }%>
+                        <%if(error_msg){%>
+                        <%=error_msg%>
+                        <% }%>
+                        <%if(success_msg){%>
+                        <%=success_msg%>
+                        <% }%>
                     <p>
                         <ul class="list-group">
                             <li class="list-group-item d-flex justify-content-between align-items-center">

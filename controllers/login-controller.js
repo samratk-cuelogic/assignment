@@ -58,7 +58,7 @@ exports.registerUser = function(req, res, next) {
             if (err) {
                 console.log('Something went wrong!');
                 //res.json({ success: true });
-                req.flash('error_msg', 'You are registered and can now login');
+                req.flash('error_msg', 'Something went wrong.');
                 res.redirect('/login');
             } else {
                 console.log('User saved successfully');
@@ -74,7 +74,12 @@ exports.login = function(req, res, next) {
     console.log('login');
     res.render('index', { title: 'Assignment App', page: 'login', errors: {} });
 };
- 
+  
+ exports.loginfail = function(req, res, next) { 
+    
+    req.flash('error_msg', 'Invalid username or password!');
+    res.redirect('/login');
+};
 
 /*
 exports.loginUser = function(req, res, next) {

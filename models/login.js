@@ -16,7 +16,9 @@ var user_Schema = new Schema({
  
 
 var login = mongoose.model('user', user_Schema);
+var userLogin = mongoose.model('user', user_Schema);
 
+  module.exports.userLogin = login;
 var User = module.exports.login = login;
  
 
@@ -55,10 +57,6 @@ module.exports.comparePassword = function(candidatePassword, hash, callback){
 }
  
 module.exports.getAllUser = function(callback){
-	var query = {}; 
-	User.find(query, callback);
-}
-module.exports.getAllNotLoggedInUser = function(callback){
 	var query = {}; 
 	User.find(query, callback);
 }

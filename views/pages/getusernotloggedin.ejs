@@ -13,17 +13,17 @@
 				</div>
 			</form>
 	</div> -->
-	<h1>Users Not Logged IN </h1>
+	<h3>Users not logged in last <%=process.env.LASTLOGINDAYS%> days </h3>
 </div>
 <div class="row">
-	<div class="col-md-12">
+	<div class="col-md-9">
 			<%if(userList){%>
 			<% for(i=0; i<userList.length; i++) { %>
 			<pre>
-				Name	     :  <%=userList[i].firstName%> <%=userList[i].lastName%>
-				Username     :	<%=userList[i].username%>  
-				Email  	     :	<%=userList[i].email%>  
-				Password     :	<%=userList[i].password%>  
+	Name	     :  <%=userList[i].firstName%> <%=userList[i].lastName%>
+	Username     :	<%=userList[i].username%>  
+	Email  	     :	<%=userList[i].email%>  
+	Password     :	<%=userList[i].password%>  
 			</pre>
 				<%}%>
 			<%}%>
